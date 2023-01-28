@@ -13,7 +13,6 @@ dist-ssr
 *.local
 
 # Editor directories and files
-Assets used-this folder is not in the project/*
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -23,9 +22,5 @@ Assets used-this folder is not in the project/*
 *.njsproj
 *.sln
 *.sw?
- 
- client/node_modules
- server/node_modules
- 
- server/.env
-server/.env
+
+.env

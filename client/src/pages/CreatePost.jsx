@@ -30,7 +30,7 @@ const CreatePost = () => {
       try {
         setGeneratingImg(true);
         const response = await fetch(
-          'https://dalle-arbb.onrender.com/api/v1/dalle',
+          'http://localhost:8080/api/v1/dalle',
           {
             method: 'POST',
             headers: {
@@ -61,13 +61,13 @@ const CreatePost = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          'https://dalle-arbb.onrender.com/api/v1/post',
+          'http://localhost:8080/api/v1/post',
           {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ ...form }),
+            body: JSON.stringify({...form}),
           }
         );
 
@@ -75,7 +75,7 @@ const CreatePost = () => {
         alert('Success');
         navigate('/');
       } catch (err) {
-        alert(err);
+        alert(err + " 0-S");
       } finally {
         setLoading(false);
       }
